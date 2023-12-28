@@ -1,4 +1,4 @@
-import random,time
+import random,time,os
 
 # Functions 
 
@@ -29,6 +29,11 @@ def retry():
     if ans == 'y':
         game(trials)
     else:
+        print("Goodbye!")
+
+        #clears the terminal
+        os.system('cls' if os.name == 'nt' else 'clear')
+        #ends the program
         quit()
 
 
